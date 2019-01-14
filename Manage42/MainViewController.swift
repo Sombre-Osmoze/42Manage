@@ -1,29 +1,38 @@
 //
-//  Authentication.swift
+//  MainViewController.swift
 //  Manage42
 //
-//  Created by Marcus Florentin on 05/01/2019.
+//  Created by Marcus Florentin on 07/01/2019.
 //  Copyright © 2019 Marcus Florentin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import SafariServices
 import API42
 
-class AuthenticationHandler: NSObject, SFSafariViewControllerDelegate {
+class MainViewController: UITabBarController, SFSafariViewControllerDelegate {
 
-	var safariController : SFSafariViewController
-	var afterAuth : () -> Void = {}
+    override func viewDidLoad() {
+		super.viewDidLoad()
+		
 
-	override init() {
-		let url = URL(string: "https://api.intra.42.fr/oauth/authorize?client_id=5a9e4a1d069dd749fc0ae3b972c8b60474d070dd07f4d75b297912e1804f391f&redirect_uri=https%3A%2F%2Fcom.osmoze.Manage42&response_type=code")!
+		// Do any additional setup after loading the view.
 
-		safariController = SFSafariViewController(url: url)
-		super.init()
-		safariController.delegate = self
-	}
+    }
 
-	private func obtainToken(auth code: String) -> Void {
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+
+	private func obtainToken(auth code: String, view auth: SFSafariViewController) -> Void {
 
 		let url = URL(string: "https://api.intra.42.fr/oauth/token")!
 
@@ -41,7 +50,9 @@ class AuthenticationHandler: NSObject, SFSafariViewControllerDelegate {
 					do {
 						let token =  try JSONDecoder().decode(Token.self, from: data!)
 						controller = ControllerAPI(token: token)
-						self.afterAuth()
+						DispatchQueue.main.async {
+							auth.dismiss(animated: true, completion: nil)
+						}
 						try token.store()
 
 					} catch {
@@ -56,14 +67,11 @@ class AuthenticationHandler: NSObject, SFSafariViewControllerDelegate {
 	}
 
 
-
 	func safariViewController(_ controller: SFSafariViewController, initialLoadDidRedirectTo URL: URL) {
 
 		if URL.host == "com.osmoze.manage42", let token = URL.query?.replacingOccurrences(of: "code=", with: "") {
-			controller.dismiss(animated: true, completion: {
-				self.obtainToken(auth: token)
-			})
+			controller.dismiss(animated: true, completion: nil)
+			obtainToken(auth: token, view: controller)
 		}
 	}
-
 }

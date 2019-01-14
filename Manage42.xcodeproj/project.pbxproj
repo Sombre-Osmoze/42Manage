@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED33086D21EBC4480062162D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086C21EBC4480062162D /* UserView.swift */; };
+		ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */; };
+		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
+		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0021DF969C00B61435 /* StoreKit.framework */; };
 		ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0221DF98A200B61435 /* LoginViewController.swift */; };
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
 		ED959C0A21E0E26F00B61435 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; };
 		ED959C0B21E0E26F00B61435 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED959CB721E3C19900B61435 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED959CB621E3C19900B61435 /* Home.storyboard */; };
+		ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959CBA21E3D47400B61435 /* MainViewController.swift */; };
 		EDD273392123704500268596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD273382123704500268596 /* AppDelegate.swift */; };
 		EDD2733B2123704500268596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2733A2123704500268596 /* ViewController.swift */; };
 		EDD2733E2123704500268596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733C2123704500268596 /* Main.storyboard */; };
@@ -66,6 +71,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED33086C21EBC4480062162D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
+		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		ED959C0021DF969C00B61435 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ED959C0221DF98A200B61435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED959C0421E0DB9600B61435 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		ED959CA321E2A22300B61435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED959CA421E2A22300B61435 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		ED959CB621E3C19900B61435 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		ED959CBA21E3D47400B61435 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EDD273352123704500268596 /* Manage42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manage42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD273382123704500268596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD2733A2123704500268596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 				EDD273682123767A00268596 /* AuthenticationServices.framework in Frameworks */,
 				ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */,
 				ED959C0A21E0E26F00B61435 /* API42.framework in Frameworks */,
+				ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +138,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED33086821EBB9A50062162D /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				ED3EB26421ED08CB002B9F4D /* Users */,
+				ED33086921EBB9BC0062162D /* Interface */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		ED33086921EBB9BC0062162D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		ED3EB26421ED08CB002B9F4D /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				ED33086C21EBC4480062162D /* UserView.swift */,
+				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		ED959C8921E2A22200B61435 /* Agent42 */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				ED959CB621E3C19900B61435 /* Home.storyboard */,
+				ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -192,6 +229,8 @@
 				EDD273382123704500268596 /* AppDelegate.swift */,
 				EDD2733A2123704500268596 /* ViewController.swift */,
 				EDD2733C2123704500268596 /* Main.storyboard */,
+				ED959CBA21E3D47400B61435 /* MainViewController.swift */,
+				ED33086821EBB9A50062162D /* Bases */,
 				ED959CB521E3C18E00B61435 /* Home */,
 				EDD2736A212376E800268596 /* Login */,
 			);
@@ -201,6 +240,7 @@
 		EDD273662123767A00268596 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED3EB26721ED0AC8002B9F4D /* GameKit.framework */,
 				ED959C0821E0E26400B61435 /* API42.framework */,
 				ED959C0021DF969C00B61435 /* StoreKit.framework */,
 				EDD273672123767A00268596 /* AuthenticationServices.framework */,
@@ -316,6 +356,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
@@ -397,8 +440,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */,
+				ED33086D21EBC4480062162D /* UserView.swift in Sources */,
 				ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */,
 				EDD2733B2123704500268596 /* ViewController.swift in Sources */,
+				ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */,
+				ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */,
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
 				ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */,
 			);
