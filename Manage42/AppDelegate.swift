@@ -10,7 +10,7 @@ import UIKit
 import API42
 import SafariServices
 
-let auth = AuthenticationHandler()
+var auth : AuthenticationHandler? = nil
 var controller : ControllerAPI? = nil
 
 @UIApplicationMain

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import API42
 
 //private let reuseIdentifier = "Cell"
 
 class HomeCollectionViewController: UICollectionViewController {
+
+	var me : UserInformation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +25,9 @@ class HomeCollectionViewController: UICollectionViewController {
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-
-		controller?.ownerInformation(completion: { (owner, error) in
-			DispatchQueue.main.async {
-				self.navigationItem.title?.append(" \(owner!.firstName)")
-			}
-		})
     }
+
+
 
     /*
     // MARK: - Navigation
@@ -50,16 +49,27 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+		return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+		if indexPath.row == 0, let cell = collectionView.dequeueReusableSupplementaryView(ofKind: "BasicInformationCollectionViewCell", withReuseIdentifier: "Cell", for: indexPath) as? BasicInformationCollectionViewCell {
+			cell.load(user: me!)
+			return cell
+		}
+
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
     
         // Configure the cell
     
         return cell
     }
+
+	func refresh() -> Void {
+
+	}
 
     // MARK: UICollectionViewDelegate
 

@@ -11,6 +11,7 @@
 		ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */; };
 		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
+		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
 		ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0021DF969C00B61435 /* StoreKit.framework */; };
 		ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0221DF98A200B61435 /* LoginViewController.swift */; };
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
@@ -75,6 +76,7 @@
 		ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED959C0021DF969C00B61435 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ED959C0221DF98A200B61435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED959C0421E0DB9600B61435 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				ED33086C21EBC4480062162D /* UserView.swift */,
 				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
+				ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */,
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
 				ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */,
+				ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

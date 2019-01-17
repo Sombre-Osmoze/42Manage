@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
         <scene sceneID="1Ha-64-vor">
             <objects>
                 <collectionViewController id="I6y-gZ-T5N" customClass="HomeCollectionViewController" customModule="Manage42" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k6F-aI-REg">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="k6F-aI-REg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,7 +40,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="5J0-gf-IoB">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BasicOwnerInfo" reuseIdentifier="Cell" id="5J0-gf-IoB" customClass="BasicInformationCollectionViewCell" customModule="Manage42" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="179" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -47,42 +48,104 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-id-sS6">
-                                            <rect key="frame" x="20" y="20" width="35" height="14.333333333333336"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="19.999999999999996" y="20" width="43.666666666666657" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="textColor" name="Tint"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APt-tr-pNS">
-                                            <rect key="frame" x="148.33333333333334" y="16.666666666666668" width="10.666666666666657" height="21.000000000000004"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="OwnerWallet" text="₳" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APt-tr-pNS">
+                                            <rect key="frame" x="148.33333333333334" y="18.666666666666668" width="10.666666666666657" height="21.000000000000004"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaR-Bi-ltK">
-                                            <rect key="frame" x="150.66666666666666" y="38.666666666666664" width="8.3333333333333428" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluation points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-jW-Agw">
+                                            <rect key="frame" x="20" y="46" width="120" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="textColor" name="Tint"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="OwnerEvalPoints" text="?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaR-Bi-ltK">
+                                            <rect key="frame" x="150.66666666666666" y="44.666666666666664" width="8.3333333333333428" height="20.999999999999993"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluation points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-jW-Agw">
-                                            <rect key="frame" x="20.000000000000007" y="42.333333333333336" width="96.666666666666686" height="13.333333333333336"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cursus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuM-nd-ZWE">
+                                            <rect key="frame" x="19.999999999999996" y="72" width="49.666666666666657" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="FVS-eb-Qxf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="textColor" name="Tint"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-eJ-zHb">
+                                            <rect key="frame" x="129" y="66" width="30" height="30"/>
+                                            <state key="normal" title="42"/>
+                                            <connections>
+                                                <action selector="changeCursus:" destination="5J0-gf-IoB" eventType="touchUpInside" id="ewG-GZ-drs"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-D3-JO9">
+                                            <rect key="frame" x="20" y="98" width="48" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <color key="textColor" name="Tint"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midshipman" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGw-ZQ-TaR">
+                                            <rect key="frame" x="85.333333333333314" y="100.66666666666667" width="73.666666666666686" height="15.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETEC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IZ-Ix-4wZ">
+                                            <rect key="frame" x="20" y="127" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in 10 years" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-7Y-UpS">
+                                            <rect key="frame" x="94.333333333333314" y="129.66666666666666" width="64.666666666666686" height="15.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="6IZ-Ix-4wZ" firstAttribute="leading" secondItem="5J0-gf-IoB" secondAttribute="leadingMargin" constant="12" id="3et-XU-nUl"/>
                                     <constraint firstItem="jZh-jW-Agw" firstAttribute="leading" secondItem="5J0-gf-IoB" secondAttribute="leadingMargin" constant="12" id="847-cZ-MYm"/>
                                     <constraint firstItem="jZh-jW-Agw" firstAttribute="top" secondItem="3uf-id-sS6" secondAttribute="bottom" constant="8" id="8K8-eh-eWI"/>
+                                    <constraint firstItem="6G8-D3-JO9" firstAttribute="top" secondItem="YuM-nd-ZWE" secondAttribute="bottom" constant="8" id="IGB-W7-vqt"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="mAG-7Y-UpS" secondAttribute="trailing" constant="12" id="IT6-Cq-2Gd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="N3d-eJ-zHb" secondAttribute="trailing" constant="12" id="Ijr-Is-IiH"/>
+                                    <constraint firstItem="RGw-ZQ-TaR" firstAttribute="centerY" secondItem="6G8-D3-JO9" secondAttribute="centerY" id="KXH-AQ-AdE"/>
+                                    <constraint firstItem="YuM-nd-ZWE" firstAttribute="top" secondItem="jZh-jW-Agw" secondAttribute="bottom" constant="8" id="MI6-th-I7J"/>
+                                    <constraint firstItem="N3d-eJ-zHb" firstAttribute="centerY" secondItem="YuM-nd-ZWE" secondAttribute="centerY" id="NjR-ce-rC6"/>
+                                    <constraint firstItem="mAG-7Y-UpS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6IZ-Ix-4wZ" secondAttribute="trailing" constant="15" id="V0L-Rg-67G"/>
                                     <constraint firstItem="3uf-id-sS6" firstAttribute="leading" secondItem="5J0-gf-IoB" secondAttribute="leadingMargin" constant="12" id="VWW-DE-brz"/>
                                     <constraint firstItem="oaR-Bi-ltK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jZh-jW-Agw" secondAttribute="trailing" constant="8" id="VeY-E1-013"/>
                                     <constraint firstItem="APt-tr-pNS" firstAttribute="centerY" secondItem="3uf-id-sS6" secondAttribute="centerY" id="bpz-at-1ET"/>
+                                    <constraint firstItem="YuM-nd-ZWE" firstAttribute="leading" secondItem="5J0-gf-IoB" secondAttribute="leadingMargin" constant="12" id="cn7-ag-rrC"/>
+                                    <constraint firstItem="6IZ-Ix-4wZ" firstAttribute="top" secondItem="6G8-D3-JO9" secondAttribute="bottom" constant="8" id="eZj-ef-5bh"/>
                                     <constraint firstItem="3uf-id-sS6" firstAttribute="top" secondItem="5J0-gf-IoB" secondAttribute="top" constant="20" id="i8f-fF-aNy"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="APt-tr-pNS" secondAttribute="trailing" constant="12" id="j1N-6n-hhv"/>
+                                    <constraint firstItem="APt-tr-pNS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3uf-id-sS6" secondAttribute="trailing" constant="15" id="qwG-Oc-qQL"/>
+                                    <constraint firstItem="6G8-D3-JO9" firstAttribute="leading" secondItem="5J0-gf-IoB" secondAttribute="leadingMargin" constant="12" id="r4P-Pl-eyY"/>
+                                    <constraint firstItem="mAG-7Y-UpS" firstAttribute="centerY" secondItem="6IZ-Ix-4wZ" secondAttribute="centerY" id="sim-3Z-ecX"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="RGw-ZQ-TaR" secondAttribute="trailing" constant="12" id="viK-RF-if2"/>
                                     <constraint firstItem="oaR-Bi-ltK" firstAttribute="centerY" secondItem="jZh-jW-Agw" secondAttribute="centerY" id="wjJ-pT-COJ"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="oaR-Bi-ltK" secondAttribute="trailing" constant="12" id="z6m-N5-a9V"/>
+                                    <constraint firstItem="RGw-ZQ-TaR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6G8-D3-JO9" secondAttribute="trailing" constant="15" id="z7T-Pe-22o"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="cursusButton" destination="N3d-eJ-zHb" id="P31-9Q-0tT"/>
+                                    <outlet property="etecLabel" destination="mAG-7Y-UpS" id="BHV-uL-9hb"/>
+                                    <outlet property="evaluationPointsLabel" destination="oaR-Bi-ltK" id="MAZ-H7-vhN"/>
+                                    <outlet property="gradeLabel" destination="RGw-ZQ-TaR" id="Dfs-Ue-8ms"/>
+                                    <outlet property="walletLabel" destination="APt-tr-pNS" id="s0U-tZ-x3Q"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -97,9 +160,18 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnh-FP-n7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="cvO-gm-KtI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
             </objects>
             <point key="canvasLocation" x="-458.39999999999998" y="-47.290640394088669"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Tint">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
     <color key="tintColor" name="Tint"/>
 </document>
