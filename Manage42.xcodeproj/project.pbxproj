@@ -12,6 +12,7 @@
 		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
+		ED56355F21F17899009457AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56355E21F17899009457AF /* Colors.xcassets */; };
 		ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0021DF969C00B61435 /* StoreKit.framework */; };
 		ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0221DF98A200B61435 /* LoginViewController.swift */; };
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
@@ -77,6 +78,7 @@
 		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED56355E21F17899009457AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ED959C0021DF969C00B61435 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ED959C0221DF98A200B61435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED959C0421E0DB9600B61435 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				EDD273442123704700268596 /* Info.plist */,
 				EDD273692123767A00268596 /* Manage42.entitlements */,
 				EDD2733F2123704700268596 /* Assets.xcassets */,
+				ED56355E21F17899009457AF /* Colors.xcassets */,
 				EDD273412123704700268596 /* LaunchScreen.storyboard */,
 				EDD273382123704500268596 /* AppDelegate.swift */,
 				EDD2733A2123704500268596 /* ViewController.swift */,
@@ -417,6 +420,7 @@
 				EDD2736C2123770300268596 /* Login.storyboard in Resources */,
 				ED959CB721E3C19900B61435 /* Home.storyboard in Resources */,
 				EDD273432123704700268596 /* LaunchScreen.storyboard in Resources */,
+				ED56355F21F17899009457AF /* Colors.xcassets in Resources */,
 				EDD273402123704700268596 /* Assets.xcassets in Resources */,
 				EDD2733E2123704500268596 /* Main.storyboard in Resources */,
 			);

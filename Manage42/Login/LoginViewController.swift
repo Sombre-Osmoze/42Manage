@@ -34,8 +34,12 @@ class LoginViewController: UIViewController {
 			if step == .owner, error == nil, auth!.owner?.imageUrl != nil  {
 				controller?.user(image: auth!.owner!.imageUrl!, completion: { (data, error) in
 						if error == nil, let data = data {
+							auth?.owner?.image = data
 							DispatchQueue.main.async {
 								self.userPicture.image = UIImage(data: data)
+							}
+							if let file = try? JSONEncoder().encode(auth!.owner!) {
+								UserDefaults.standard.setValue(file, forKey: "user")
 							}
 						}
 						auth?.step = .terminated

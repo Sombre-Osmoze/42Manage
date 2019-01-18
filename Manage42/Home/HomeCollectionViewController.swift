@@ -13,19 +13,19 @@ private let reuseIdentifier = "Cell"
 
 class HomeCollectionViewController: UICollectionViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-
-
 	// MARK: - Storyboard
 
 
 	@IBOutlet var cursusPicker: UIPickerView!
+	@IBOutlet weak var cursusBarButton: UIBarButtonItem!
 
 
 	@IBAction func changeCursus(_ sender: Any) {
 		cursusPicker.isHidden = false
-
-
-
+		UIView.animate(withDuration: 0.3) {
+			self.cursusPicker.frame = CGRect(x: 0, y: self.view.bounds.height - self.view.bounds.height / 3,
+										width: self.view.bounds.width, height: self.cursusPicker.bounds.height)
+		}
 	}
 
 	// MARK: - HomeCollectionViewController
@@ -34,14 +34,36 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 	var me : UserInformation!
 	var currentCursus : Int = 1
 
+	func refreshOwnerData() -> Void {
+		controller?.ownerInformation(completion: { (owner, error) in
+			if error == nil, owner != nil {
+				self.me = owner!
+				DispatchQueue.main.async {
+					self.collectionView.reloadData()
+					self.currentCursus = self.me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
+				}
+			} else {
+				print(error.debugDescription)
+			}
+		})
+
+
+	}
+
+
 	// MARK: - UIViewController
 
     override func viewDidLoad() {
+
 		if auth != nil, auth!.owner != nil {
 			me = auth!.owner
 			auth = nil
-			currentCursus = me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
+		} else if let file = UserDefaults.standard.value(forKey: "user") as? Data {
+			me = try? JSONDecoder().decode(UserInformation.self, from: file)
+		} else {
+			fatalError("No owner file")
 		}
+		currentCursus = me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
 
         super.viewDidLoad()
 		navigationItem.title?.append(contentsOf: " " + me.firstName)
@@ -55,6 +77,11 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
         // Do any additional setup after loading the view.
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+
+
+	}
 
 
     /*
@@ -77,7 +104,7 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-		return 1
+		return 2
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,7 +115,7 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 		}
 
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graph", for: indexPath)
     
         // Configure the cell
     
@@ -148,6 +175,7 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		currentCursus = me.cursusUsers[row].id
+
 		pickerView.isHidden = true
 		self.collectionView.reloadData()
 	}
