@@ -54,11 +54,10 @@ class LoginViewController: UIViewController {
 			case .terminated:
 				self.stepLabel.text = "Finishing..."
 				self.stepProgress.progress = 7/7
+				sleep(2)
 				self.stepProgress.isHidden = true
 				self.stepLabel.isHidden = true
-				sleep(3)
 				self.performSegue(withIdentifier: "Load", sender: auth!.owner)
-				auth = nil
 			case .code:
 				self.stepLabel.text = "Credentials storage..."
 				self.stepProgress.progress = 3/7
@@ -86,19 +85,12 @@ class LoginViewController: UIViewController {
 
 
     // MARK: - Navigation
-
+	/*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-
-		if segue.identifier == "Load", let dest = (segue.destination as! UINavigationController).viewControllers.first as? HomeCollectionViewController {
-
-			dest.me = sender as? UserInformation
-			
-		}
-
 	}
-
+	*/
 
 }

@@ -19,20 +19,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="cEM-oX-Fj1" kind="relationship" relationship="viewControllers" id="HnP-Np-YiW"/>
-                        <segue destination="wcR-eg-7NN" kind="show" id="XAf-sJ-dux"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbC-gr-9j3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1407" y="-284"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="mBo-xo-rbr">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="wcR-eg-7NN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KdY-S3-3Ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1407" y="-679"/>
         </scene>
         <!--Home-->
         <scene sceneID="4JW-aH-pew">

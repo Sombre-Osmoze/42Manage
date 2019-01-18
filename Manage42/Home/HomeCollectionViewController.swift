@@ -9,20 +9,48 @@
 import UIKit
 import API42
 
-//private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "Cell"
 
-class HomeCollectionViewController: UICollectionViewController {
+class HomeCollectionViewController: UICollectionViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
+
+
+	// MARK: - Storyboard
+
+
+	@IBOutlet var cursusPicker: UIPickerView!
+
+
+	@IBAction func changeCursus(_ sender: Any) {
+		cursusPicker.isHidden = false
+
+
+
+	}
+
+	// MARK: - HomeCollectionViewController
+
 
 	var me : UserInformation!
+	var currentCursus : Int = 1
+
+	// MARK: - UIViewController
 
     override func viewDidLoad() {
+		if auth != nil, auth!.owner != nil {
+			me = auth!.owner
+			auth = nil
+			currentCursus = me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
+		}
+
         super.viewDidLoad()
+		navigationItem.title?.append(contentsOf: " " + me.firstName)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -54,8 +82,8 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-		if indexPath.row == 0, let cell = collectionView.dequeueReusableSupplementaryView(ofKind: "BasicInformationCollectionViewCell", withReuseIdentifier: "Cell", for: indexPath) as? BasicInformationCollectionViewCell {
-			cell.load(user: me!)
+		if indexPath.row == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Basic", for: indexPath) as? BasicInformationCollectionViewCell {
+			cell.load(user: me!, cursus: currentCursus)
 			return cell
 		}
 
@@ -101,5 +129,28 @@ class HomeCollectionViewController: UICollectionViewController {
     
     }
     */
+
+	// MARK: - UIPickerViewDataSource
+
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return me.cursusUsers.count
+	}
+
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1
+	}
+
+
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return me.cursusUsers[row].cursus.name
+	}
+
+
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		currentCursus = me.cursusUsers[row].id
+		pickerView.isHidden = true
+		self.collectionView.reloadData()
+	}
+
 
 }

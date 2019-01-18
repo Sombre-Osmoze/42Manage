@@ -11,25 +11,20 @@ import API42
 
 class BasicInformationCollectionViewCell: UICollectionViewCell {
 
-	var collection : HomeCollectionViewController!
-
 	@IBOutlet weak var walletLabel: UILabel!
 	@IBOutlet weak var evaluationPointsLabel: UILabel!
-	@IBOutlet weak var cursusButton: UIButton!
+	@IBOutlet weak var cursusLabel: UILabel!
 	@IBOutlet weak var gradeLabel: UILabel!
 	@IBOutlet weak var etecLabel: UILabel!
 
+	func load(user info: UserInformation, cursus id: Int) -> Void {
 
-	@IBAction func changeCursus(_ sender: Any) {
-
-	}
-
-
-	func load(user info: UserInformation) -> Void {
+		let current = info.cursusUsers.first(where: { $0.id == id })
 
 		walletLabel.text = "\(info.wallet) ₳"
 		evaluationPointsLabel.text = info.correctionPoint.description
-//		cursusButton.currentTitle = info
+		cursusLabel.text = current?.cursus.name
+		gradeLabel.text = current?.grade ?? "Novice"
 
 	}
 }
