@@ -123,6 +123,7 @@
 		EDE0D58E21F561A900B9170B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelHistoricsTableViewController.swift; sourceTree = "<group>"; };
 		EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
+		EDE0D59A21F5A47700B9170B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +200,7 @@
 		EDD2732C2123704500268596 = {
 			isa = PBXGroup;
 			children = (
+				EDE0D59A21F5A47700B9170B /* README.md */,
 				EDD273372123704500268596 /* Manage42 */,
 				EDD2738E2123785200268596 /* Manage42Tests */,
 				EDD2739C2123785900268596 /* Manage42UITests */,

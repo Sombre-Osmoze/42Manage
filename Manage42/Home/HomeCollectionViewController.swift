@@ -60,6 +60,7 @@ class HomeCollectionViewController: UserCollectionViewController {
 			user.image = UserDefaults.standard.value(forKey: "picture") as? Data
 		} else {
 			controller?.logout()
+			// TODO: Better Handling
 			fatalError("No owner file")
 		}
 
