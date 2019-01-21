@@ -95,7 +95,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
 	// MARK: - Search Results Updating
 
 	func updateSearchResults(for searchController: UISearchController) {
-		print(searchController.searchBar.text)
+	
 	}
 
 }

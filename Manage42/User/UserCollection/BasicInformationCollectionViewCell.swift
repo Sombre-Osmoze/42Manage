@@ -13,7 +13,7 @@ class BasicInformationCollectionViewCell: UICollectionViewCell {
 
 	@IBOutlet weak var walletLabel: UILabel!
 	@IBOutlet weak var evaluationPointsLabel: UILabel!
-	@IBOutlet weak var cursusLabel: UILabel!
+	@IBOutlet weak var cursusTextField: UITextField!
 	@IBOutlet weak var gradeLabel: UILabel!
 	@IBOutlet weak var etecLabel: UILabel!
 
@@ -22,7 +22,7 @@ class BasicInformationCollectionViewCell: UICollectionViewCell {
 		let current = info.cursusUsers.first(where: { $0.id == id })
 		walletLabel.text = "\(info.wallet) ₳"
 		evaluationPointsLabel.text = info.correctionPoint.description
-		cursusLabel.text = current?.cursus.name
+		cursusTextField.text = current?.cursus.name
 		gradeLabel.text = current?.grade ?? "Novice"
 
 	}

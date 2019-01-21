@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED33086D21EBC4480062162D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086C21EBC4480062162D /* UserView.swift */; };
+		ED33086D21EBC4480062162D /* UserViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086C21EBC4480062162D /* UserViews.swift */; };
 		ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */; };
 		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
@@ -24,7 +24,6 @@
 		ED959CB721E3C19900B61435 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED959CB621E3C19900B61435 /* Home.storyboard */; };
 		ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959CBA21E3D47400B61435 /* MainViewController.swift */; };
 		EDD273392123704500268596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD273382123704500268596 /* AppDelegate.swift */; };
-		EDD2733B2123704500268596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2733A2123704500268596 /* ViewController.swift */; };
 		EDD2733E2123704500268596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733C2123704500268596 /* Main.storyboard */; };
 		EDD273402123704700268596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733F2123704700268596 /* Assets.xcassets */; };
 		EDD273432123704700268596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD273412123704700268596 /* LaunchScreen.storyboard */; };
@@ -34,7 +33,8 @@
 		EDD2739E2123785900268596 /* Manage42UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2739D2123785900268596 /* Manage42UITests.swift */; };
 		EDE0D58C21F52C2100B9170B /* GraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */; };
 		EDE0D58F21F561A900B9170B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D58E21F561A900B9170B /* User.storyboard */; };
-		EDE0D59121F5622A00B9170B /* LevelHistoricTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */; };
+		EDE0D59621F57D1900B9170B /* LevelHistoricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */; };
+		EDE0D59821F58C7100B9170B /* UserCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ED33086C21EBC4480062162D /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		ED33086C21EBC4480062162D /* UserViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViews.swift; sourceTree = "<group>"; };
 		ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -106,7 +106,6 @@
 		ED959CBA21E3D47400B61435 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EDD273352123704500268596 /* Manage42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manage42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD273382123704500268596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDD2733A2123704500268596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDD2733D2123704500268596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDD2733F2123704700268596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDD273422123704700268596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,7 +121,8 @@
 		EDD2739F2123785900268596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDE0D58E21F561A900B9170B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelHistoricTableViewController.swift; sourceTree = "<group>"; };
+		EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelHistoricsTableViewController.swift; sourceTree = "<group>"; };
+		EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,34 +154,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED33086821EBB9A50062162D /* Bases */ = {
-			isa = PBXGroup;
-			children = (
-				ED3EB26421ED08CB002B9F4D /* Users */,
-				ED33086921EBB9BC0062162D /* Interface */,
-			);
-			path = Bases;
-			sourceTree = "<group>";
-		};
-		ED33086921EBB9BC0062162D /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		ED3EB26421ED08CB002B9F4D /* Users */ = {
-			isa = PBXGroup;
-			children = (
-				ED33086C21EBC4480062162D /* UserView.swift */,
-				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
-				ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */,
-				ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */,
-				EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */,
-			);
-			path = Users;
-			sourceTree = "<group>";
-		};
 		ED56356221F26BBD009457AF /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,14 +224,12 @@
 			children = (
 				EDD273442123704700268596 /* Info.plist */,
 				EDD273692123767A00268596 /* Manage42.entitlements */,
+				EDD273382123704500268596 /* AppDelegate.swift */,
+				EDD273412123704700268596 /* LaunchScreen.storyboard */,
 				EDD2733F2123704700268596 /* Assets.xcassets */,
 				ED56355E21F17899009457AF /* Colors.xcassets */,
-				EDD273412123704700268596 /* LaunchScreen.storyboard */,
-				EDD273382123704500268596 /* AppDelegate.swift */,
-				EDD2733A2123704500268596 /* ViewController.swift */,
 				EDD2733C2123704500268596 /* Main.storyboard */,
 				ED959CBA21E3D47400B61435 /* MainViewController.swift */,
-				ED33086821EBB9A50062162D /* Bases */,
 				EDE0D58D21F5618F00B9170B /* User */,
 				ED56356221F26BBD009457AF /* Search */,
 				ED959CB521E3C18E00B61435 /* Home */,
@@ -311,9 +281,23 @@
 			isa = PBXGroup;
 			children = (
 				EDE0D58E21F561A900B9170B /* User.storyboard */,
-				EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */,
+				ED33086C21EBC4480062162D /* UserViews.swift */,
+				EDE0D59921F58DF900B9170B /* UserCollection */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		EDE0D59921F58DF900B9170B /* UserCollection */ = {
+			isa = PBXGroup;
+			children = (
+				EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */,
+				ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */,
+				EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */,
+				ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */,
+				EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */,
+				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
+			);
+			path = UserCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,12 +469,12 @@
 			files = (
 				ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */,
 				EDE0D58C21F52C2100B9170B /* GraphCollectionViewCell.swift in Sources */,
-				ED33086D21EBC4480062162D /* UserView.swift in Sources */,
+				ED33086D21EBC4480062162D /* UserViews.swift in Sources */,
 				ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */,
-				EDD2733B2123704500268596 /* ViewController.swift in Sources */,
+				EDE0D59821F58C7100B9170B /* UserCollectionViewController.swift in Sources */,
+				EDE0D59621F57D1900B9170B /* LevelHistoricsTableViewController.swift in Sources */,
 				ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */,
 				ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */,
-				EDE0D59121F5622A00B9170B /* LevelHistoricTableViewController.swift in Sources */,
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
 				ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */,
 				ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */,

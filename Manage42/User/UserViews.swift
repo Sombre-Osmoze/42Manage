@@ -1,5 +1,5 @@
 //
-//  UserView.swift
+//  UserViews.swift
 //  Manage42
 //
 //  Created by Marcus Florentin on 13/01/2019.
