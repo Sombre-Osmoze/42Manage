@@ -22,10 +22,6 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 
 	@IBAction func changeCursus(_ sender: Any) {
 		cursusPicker.isHidden = false
-		UIView.animate(withDuration: 0.3) {
-			self.cursusPicker.frame = CGRect(x: 0, y: self.view.bounds.height - self.view.bounds.height / 3,
-										width: self.view.bounds.width, height: self.cursusPicker.bounds.height)
-		}
 	}
 
 	// MARK: - HomeCollectionViewController
@@ -38,10 +34,20 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 		controller?.ownerInformation(completion: { (owner, error) in
 			if error == nil, owner != nil {
 				self.me = owner!
-				DispatchQueue.main.async {
-					self.collectionView.reloadData()
-					self.currentCursus = self.me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
-				}
+				controller?.user(image: owner!.imageUrl!, completion: { (data, error) in
+					if error == nil, let dataC = data {
+						self.me.image = dataC
+						if let file = try? JSONEncoder().encode(self.me) {
+							UserDefaults.standard.setValue(file, forKey: "user")
+							UserDefaults.standard.set(self.me.image!, forKey: "picture")
+						}
+					} else {
+						print(error.debugDescription)
+					}
+					DispatchQueue.main.async {
+						self.loadOwnerData()
+					}
+				})
 			} else {
 				print(error.debugDescription)
 			}
@@ -50,20 +56,22 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 
 	}
 
+	func loadOwnerData() -> Void {
+		self.currentCursus = self.me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
+		self.collectionView.reloadData()
+	}
 
 	// MARK: - UIViewController
 
     override func viewDidLoad() {
 
-		if auth != nil, auth!.owner != nil {
-			me = auth!.owner
-			auth = nil
-		} else if let file = UserDefaults.standard.value(forKey: "user") as? Data {
+		if let file = UserDefaults.standard.value(forKey: "user") as? Data {
 			me = try? JSONDecoder().decode(UserInformation.self, from: file)
+			self.currentCursus = self.me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
+			me.image = UserDefaults.standard.value(forKey: "picture") as? Data
 		} else {
 			fatalError("No owner file")
 		}
-		currentCursus = me.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
 
         super.viewDidLoad()
 		navigationItem.title?.append(contentsOf: " " + me.firstName)
@@ -72,15 +80,14 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
     }
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 
-
+		refreshOwnerData()
 	}
 
 
@@ -104,22 +111,31 @@ class HomeCollectionViewController: UICollectionViewController, UIPickerViewData
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-		return 2
+		return 3
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-		if indexPath.row == 0, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Basic", for: indexPath) as? BasicInformationCollectionViewCell {
-			cell.load(user: me!, cursus: currentCursus)
+
+		switch indexPath.row {
+		case 0:
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCollectionViewCell
+			cell.load(user: me)
+			return cell
+		case 1:
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Basic", for: indexPath) as! BasicInformationCollectionViewCell
+				cell.load(user: me, cursus: currentCursus)
+				return cell
+		case 2:
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graphic", for: indexPath) as! GraphCollectionViewCell
+			cell.load(user: me, cursus: currentCursus)
+			return cell
+		default:
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graph", for: indexPath)
+
+			// Configure the cell
 			return cell
 		}
-
-
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graph", for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
     }
 
 	func refresh() -> Void {

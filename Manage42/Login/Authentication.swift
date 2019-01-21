@@ -24,6 +24,10 @@ extension AuthenticationHandler:  SFSafariViewControllerDelegate {
 		return sf
 	}
 
+	public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+		step = .none
+	}
+
 	public func safariViewController(_ controller: SFSafariViewController, initialLoadDidRedirectTo URL: URL) {
 
 		if URL.host == Foundation.URL(string: redirect)!.host!, let code = URL.query?.replacingOccurrences(of: "code=", with: "") {

@@ -13,6 +13,9 @@
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
 		ED56355F21F17899009457AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56355E21F17899009457AF /* Colors.xcassets */; };
+		ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */; };
+		ED56356421F26BCE009457AF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED56356321F26BCE009457AF /* Search.storyboard */; };
+		ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356521F26D4E009457AF /* SearchTableViewController.swift */; };
 		ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0021DF969C00B61435 /* StoreKit.framework */; };
 		ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0221DF98A200B61435 /* LoginViewController.swift */; };
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
@@ -29,6 +32,9 @@
 		EDD2736C2123770300268596 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2736B2123770300268596 /* Login.storyboard */; };
 		EDD273902123785200268596 /* Manage42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2738F2123785200268596 /* Manage42Tests.swift */; };
 		EDD2739E2123785900268596 /* Manage42UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2739D2123785900268596 /* Manage42UITests.swift */; };
+		EDE0D58C21F52C2100B9170B /* GraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */; };
+		EDE0D58F21F561A900B9170B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D58E21F561A900B9170B /* User.storyboard */; };
+		EDE0D59121F5622A00B9170B /* LevelHistoricTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,9 @@
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED56355E21F17899009457AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED56356321F26BCE009457AF /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		ED56356521F26D4E009457AF /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		ED959C0021DF969C00B61435 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ED959C0221DF98A200B61435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED959C0421E0DB9600B61435 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -111,6 +120,9 @@
 		EDD2739B2123785900268596 /* Manage42UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Manage42UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD2739D2123785900268596 /* Manage42UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manage42UITests.swift; sourceTree = "<group>"; };
 		EDD2739F2123785900268596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDE0D58E21F561A900B9170B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelHistoricTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +176,19 @@
 				ED33086C21EBC4480062162D /* UserView.swift */,
 				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
 				ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */,
+				ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */,
+				EDE0D58B21F52C2100B9170B /* GraphCollectionViewCell.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		ED56356221F26BBD009457AF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ED56356321F26BCE009457AF /* Search.storyboard */,
+				ED56356521F26D4E009457AF /* SearchTableViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		ED959C8921E2A22200B61435 /* Agent42 */ = {
@@ -237,6 +260,8 @@
 				EDD2733C2123704500268596 /* Main.storyboard */,
 				ED959CBA21E3D47400B61435 /* MainViewController.swift */,
 				ED33086821EBB9A50062162D /* Bases */,
+				EDE0D58D21F5618F00B9170B /* User */,
+				ED56356221F26BBD009457AF /* Search */,
 				ED959CB521E3C18E00B61435 /* Home */,
 				EDD2736A212376E800268596 /* Login */,
 			);
@@ -280,6 +305,15 @@
 				EDD2739F2123785900268596 /* Info.plist */,
 			);
 			path = Manage42UITests;
+			sourceTree = "<group>";
+		};
+		EDE0D58D21F5618F00B9170B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EDE0D58E21F561A900B9170B /* User.storyboard */,
+				EDE0D59021F5622A00B9170B /* LevelHistoricTableViewController.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +455,8 @@
 				ED959CB721E3C19900B61435 /* Home.storyboard in Resources */,
 				EDD273432123704700268596 /* LaunchScreen.storyboard in Resources */,
 				ED56355F21F17899009457AF /* Colors.xcassets in Resources */,
+				ED56356421F26BCE009457AF /* Search.storyboard in Resources */,
+				EDE0D58F21F561A900B9170B /* User.storyboard in Resources */,
 				EDD273402123704700268596 /* Assets.xcassets in Resources */,
 				EDD2733E2123704500268596 /* Main.storyboard in Resources */,
 			);
@@ -448,12 +484,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */,
+				EDE0D58C21F52C2100B9170B /* GraphCollectionViewCell.swift in Sources */,
 				ED33086D21EBC4480062162D /* UserView.swift in Sources */,
 				ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */,
 				EDD2733B2123704500268596 /* ViewController.swift in Sources */,
 				ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */,
 				ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */,
+				EDE0D59121F5622A00B9170B /* LevelHistoricTableViewController.swift in Sources */,
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
+				ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */,
+				ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */,
 				ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */,
 				ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */,
 			);

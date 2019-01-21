@@ -86,6 +86,7 @@
                     <connections>
                         <outlet property="loginLabel" destination="xnI-7O-HNr" id="VEj-uD-3pP"/>
                         <outlet property="nameLabel" destination="UlC-iS-dQZ" id="VdL-WI-Ydi"/>
+                        <outlet property="signButton" destination="9c7-Dp-vNd" id="nTf-Sf-gf1"/>
                         <outlet property="stepLabel" destination="P7E-v4-dzs" id="gxS-xq-ziX"/>
                         <outlet property="stepProgress" destination="5fw-5T-aCa" id="x3N-5S-Px0"/>
                         <outlet property="userPicture" destination="n6b-UN-G4d" id="efZ-Kc-0ld"/>

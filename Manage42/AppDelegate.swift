@@ -55,6 +55,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 
+	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+		print(url)
+		return false
+	}
+
+
+
 	func askAccount() -> Void {
 		if window == nil {
 			window = UIWindow(frame: UIScreen.main.bounds)

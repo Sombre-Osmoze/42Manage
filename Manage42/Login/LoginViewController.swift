@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var stepProgress: UIProgressView!
 	@IBOutlet weak var loginLabel: UILabel!
+	@IBOutlet weak var signButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +27,23 @@ class LoginViewController: UIViewController {
     
 	@IBAction func login(_ sender: UIButton) {
 
-		sender.isEnabled = false
+		signButton.isEnabled = false
+		stepLabel.text = "Starting..."
+		stepProgress.progress = 0/7
 		stepLabel.isHidden = false
 		stepProgress.isHidden = false
 		auth = AuthenticationHandler(completion: { (step, error) in
 			self.eventHandling(step)
 			if step == .owner, error == nil, auth!.owner?.imageUrl != nil  {
 				controller?.user(image: auth!.owner!.imageUrl!, completion: { (data, error) in
-						if error == nil, let data = data {
-							auth?.owner?.image = data
+						if error == nil, let dataC = data {
 							DispatchQueue.main.async {
-								self.userPicture.image = UIImage(data: data)
+								self.userPicture.image = UIImage(data: dataC)
 							}
+							auth?.owner?.image = dataC
 							if let file = try? JSONEncoder().encode(auth!.owner!) {
 								UserDefaults.standard.setValue(file, forKey: "user")
+								UserDefaults.standard.set(auth!.owner!.image!, forKey: "picture")
 							}
 						}
 						auth?.step = .terminated
@@ -55,12 +59,15 @@ class LoginViewController: UIViewController {
 	func eventHandling(_ step: AuthenticationHandler.AuthStep) -> Void {
 		DispatchQueue.main.async {
 			switch step {
+			case .none:
+				self.stepProgress.isHidden = true
+				self.stepLabel.isHidden = true
+				self.signButton.isEnabled = true
 			case .terminated:
 				self.stepLabel.text = "Finishing..."
 				self.stepProgress.progress = 7/7
-				sleep(2)
-				self.stepProgress.isHidden = true
-				self.stepLabel.isHidden = true
+				auth?.step = .none
+				auth = nil
 				self.performSegue(withIdentifier: "Load", sender: auth!.owner)
 			case .code:
 				self.stepLabel.text = "Credentials storage..."
@@ -81,8 +88,7 @@ class LoginViewController: UIViewController {
 			case .token:
 				self.stepLabel.text = "Keychain cache..."
 				self.stepProgress.progress = 5/7
-			default:
-				print(step)
+
 			}
 		}
 	}

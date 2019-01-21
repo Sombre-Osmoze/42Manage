@@ -9,6 +9,7 @@
 import UIKit
 import API42
 
+@IBDesignable
 class CursusProgressView: UIProgressView {
 
     /*
@@ -18,6 +19,17 @@ class CursusProgressView: UIProgressView {
         // Drawing code
     }
     */
+
+	@IBInspectable
+	var height: CGFloat = 1 {
+		didSet {
+			if height > 1 {
+				transform.scaledBy(x: 1, y: height)
+				layer.cornerRadius = height / 4
+			}
+		}
+	}
+
 
 	override func setProgress(_ progress: Level, animated: Bool) {
 		super.setProgress(progress.truncatingRemainder(dividingBy: 1), animated: animated)

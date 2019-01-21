@@ -20,7 +20,6 @@ class BasicInformationCollectionViewCell: UICollectionViewCell {
 	func load(user info: UserInformation, cursus id: Int) -> Void {
 
 		let current = info.cursusUsers.first(where: { $0.id == id })
-
 		walletLabel.text = "\(info.wallet) ₳"
 		evaluationPointsLabel.text = info.correctionPoint.description
 		cursusLabel.text = current?.cursus.name
