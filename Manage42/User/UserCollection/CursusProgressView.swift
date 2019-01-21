@@ -25,7 +25,7 @@ class CursusProgressView: UIProgressView {
 		didSet {
 			if height > 1 {
 				transform.scaledBy(x: 1, y: height)
-				layer.cornerRadius = height / 4
+				layer.cornerRadius = height / 2
 			}
 		}
 	}

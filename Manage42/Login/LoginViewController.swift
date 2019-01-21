@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
 
 		signButton.isEnabled = false
 		stepLabel.text = "Starting..."
-		stepProgress.progress = 0/7
+		stepProgress.setProgress(0/7, animated: true)
 		stepLabel.isHidden = false
 		stepProgress.isHidden = false
 		auth = AuthenticationHandler(completion: { (step, error) in
@@ -65,29 +65,29 @@ class LoginViewController: UIViewController {
 				self.signButton.isEnabled = true
 			case .terminated:
 				self.stepLabel.text = "Finishing..."
-				self.stepProgress.progress = 7/7
+				self.stepProgress.setProgress(7/7, animated: true)
 				auth?.step = .none
 				self.performSegue(withIdentifier: "Load", sender: auth!.owner)
 				auth = nil
 			case .code:
 				self.stepLabel.text = "Credentials storage..."
-				self.stepProgress.progress = 3/7
+				self.stepProgress.setProgress(3/7, animated: true)
 			case .session:
 				self.stepLabel.text = "Building session..."
-				self.stepProgress.progress = 4/7
+				self.stepProgress.setProgress(4/7, animated: true)
 			case .owner:
 				self.stepLabel.text = "Collecting user informations..."
-				self.stepProgress.progress = 6/7
+				self.stepProgress.setProgress(6/7, animated: true)
 				let owner = auth!.owner!
 				self.nameLabel.text = owner.displayName
 				self.loginLabel.text = owner.login
 				self.loginLabel.isHidden = false
 			case .oath2:
 				self.stepLabel.text = "Metadata sorting"
-				self.stepProgress.progress = 2/7
+				self.stepProgress.setProgress(2/7, animated: true)
 			case .token:
 				self.stepLabel.text = "Keychain cache..."
-				self.stepProgress.progress = 5/7
+				self.stepProgress.setProgress(5/7, animated: true)
 
 			}
 		}

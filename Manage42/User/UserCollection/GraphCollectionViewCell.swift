@@ -29,7 +29,7 @@ class GraphCollectionViewCell: UICollectionViewCell {
 		let percent = Int(users.level.truncatingRemainder(dividingBy: 1) * 100)
 
 		levelLabel.text = "Level " + level.description +
-			" - " + percent.description + "%"
+			" - " + percent.description + " %"
 		levelProgressView.setProgress(users.level, animated: true)
 	}
 }

@@ -59,6 +59,7 @@ class HomeCollectionViewController: UserCollectionViewController {
 			self.currentCursus = self.user.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
 			user.image = UserDefaults.standard.value(forKey: "picture") as? Data
 		} else {
+			controller?.logout()
 			fatalError("No owner file")
 		}
 
