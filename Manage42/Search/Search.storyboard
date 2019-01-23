@@ -27,24 +27,47 @@
         <!--Search-->
         <scene sceneID="N97-AJ-lN2">
             <objects>
-                <tableViewController id="OhA-Dg-cYf" customClass="SearchTableViewController" customModule="Manage42" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController definesPresentationContext="YES" id="OhA-Dg-cYf" customClass="SearchTableViewController" customModule="Manage42" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EMO-i1-fOS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="6vQ-mz-bxG">
-                                <rect key="frame" x="0.0" y="28" width="375" height="138"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="User" textLabel="ths-Aj-exJ" detailTextLabel="SZC-Qp-Xq3" rowHeight="80" style="IBUITableViewCellStyleValue1" id="6vQ-mz-bxG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6vQ-mz-bxG" id="Iqj-5h-Nzq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ths-Aj-exJ">
+                                            <rect key="frame" x="16.000000000000004" y="30" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SZC-Qp-Xq3">
+                                            <rect key="frame" x="315" y="30" width="44" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="G8E-Mm-ajv" kind="show" identifier="showUser" id="Owb-sX-J10">
+                                        <segue key="commit" inheritsFrom="parent" id="NtL-hG-9D0"/>
+                                        <segue key="preview" inheritsFrom="commit" id="b65-RF-aB3"/>
+                                    </segue>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="OhA-Dg-cYf" id="WRV-we-2qi"/>
                             <outlet property="delegate" destination="OhA-Dg-cYf" id="1W3-Vt-Nc8"/>
+                            <outlet property="prefetchDataSource" destination="OhA-Dg-cYf" id="hYg-mw-C7V"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="search" id="bSg-3L-DTl"/>
@@ -55,6 +78,17 @@
             </objects>
             <point key="canvasLocation" x="-210.40000000000001" y="-112.3152709359606"/>
         </scene>
+        <!--User-->
+        <scene sceneID="YTc-Rz-4Ty">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" id="G8E-Mm-ajv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zy7-rk-DMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="-418"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Owb-sX-J10"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>
 </document>

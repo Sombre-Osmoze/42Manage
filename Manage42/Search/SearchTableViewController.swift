@@ -7,16 +7,36 @@
 //
 
 import UIKit
+import API42
 
-class SearchTableViewController: UITableViewController, UISearchResultsUpdating {
+class SearchTableViewController: UITableViewController, UITableViewDataSourcePrefetching, UISearchResultsUpdating {
 
 	let searchController = UISearchController(searchResultsController: nil)
+
+	private var pages : Int = 1
+	private var users : [User] = []
+	private var currentSearch : String = "a"
+
+
+	func search() -> Void {
+		controller?.search(user: searchController.searchBar.text!, page: pages, completion: { (usersData, error) in
+			if error == nil, let users = usersData {
+				self.users += users
+				DispatchQueue.main.async {
+					self.tableView.reloadData()
+				}
+			} else {
+				print(error!)
+			}
+		})
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		searchController.searchResultsUpdater = self
 		navigationItem.searchController = searchController
+		search()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,27 +45,43 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+
+		users.removeAll()
+		search()
+	}
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return users.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "User", for: indexPath)
+
+		let user = users[indexPath.row]
 
         // Configure the cell...
-
+		cell.textLabel?.text = user.login
+		cell.detailTextLabel?.text = user.id.description
         return cell
     }
-    */
+
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+		
+
+	}
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,20 +118,49 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     }
     */
 
-    /*
+	// MARK: - UITableViewDataSourcePrefetching
+
+	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+
+		if indexPaths.contains(where: { $0.row > users.count - 5 }), !currentSearch.isEmpty {
+			pages += 1
+			search()
+		}
+	}
+
+	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+
+	}
+
+
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+
+
+		
     }
-    */
+
 
 	// MARK: - Search Results Updating
 
 	func updateSearchResults(for searchController: UISearchController) {
-	
+
+		if searchController.searchBar.text != nil, !searchController.searchBar.text!.isEmpty {
+			users.removeAll()
+			pages = 1
+			currentSearch = searchController.searchBar.text!
+			search()
+		} else {
+//			currentSearch = ""
+//			users.removeAll()
+//			pages = 1
+//			tableView.reloadData()
+		}
 	}
 
 }

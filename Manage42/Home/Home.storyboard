@@ -62,10 +62,14 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="pictureImageView" destination="j43-eb-pQp" id="JPp-MQ-ojV"/>
+                                    <segue destination="OYO-fx-lrx" kind="show" identifier="showGraph" id="P4Y-c1-Sni">
+                                        <segue key="commit" inheritsFrom="parent" id="M7F-m4-31r"/>
+                                        <segue key="preview" inheritsFrom="commit" id="nzC-lW-AC3"/>
+                                    </segue>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BasicOwnerInfo" reuseIdentifier="Basic" id="MpH-xh-zof" customClass="BasicInformationCollectionViewCell" customModule="Manage42" customModuleProvider="target">
-                                <rect key="frame" x="1.6666666666666667" y="382" width="372" height="181"/>
+                                <rect key="frame" x="1.6666666666666667" y="191" width="372" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="372" height="181"/>
@@ -173,7 +177,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Graphic" id="ab7-Lq-hZy" customClass="GraphCollectionViewCell" customModule="Manage42" customModuleProvider="target">
-                                <rect key="frame" x="1.6666666666666667" y="191" width="372" height="181"/>
+                                <rect key="frame" x="1.6666666666666667" y="382" width="372" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="372" height="181"/>
@@ -215,6 +219,14 @@
                                     </segue>
                                 </connections>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="18z-tr-BXp">
+                                <rect key="frame" x="1.6666666666666667" y="573" width="372" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="372" height="181"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="I6y-gZ-T5N" id="d5z-MB-chw"/>
@@ -222,9 +234,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="IQj-5N-TEb"/>
-                    <navigationItem key="navigationItem" title="Welcome" id="RWM-tP-0gn">
-                        <barButtonItem key="rightBarButtonItem" title="Cursus" style="done" id="hzc-jf-0cl"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Welcome" id="RWM-tP-0gn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="k6F-aI-REg" id="rK8-BD-J7e"/>
@@ -243,6 +253,14 @@
             </objects>
             <point key="canvasLocation" x="-458.39999999999998" y="-47.290640394088669"/>
         </scene>
+        <!--HolyGraph-->
+        <scene sceneID="dOy-Np-xx7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" referencedIdentifier="HolyGraph" id="OYO-fx-lrx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLc-EI-rjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="-185"/>
+        </scene>
         <!--LevelHistorics-->
         <scene sceneID="PiE-UX-rlC">
             <objects>
@@ -260,6 +278,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="itW-df-8Is"/>
+        <segue reference="P4Y-c1-Sni"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>
 </document>

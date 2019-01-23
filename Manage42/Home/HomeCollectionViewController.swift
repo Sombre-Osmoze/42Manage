@@ -37,7 +37,7 @@ class HomeCollectionViewController: UserCollectionViewController {
 			}
 		})
 	}
-
+ 
 	func loadOwnerData() -> Void {
 		self.navigationItem.prompt = user.location
 		self.currentCursus = self.user.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
