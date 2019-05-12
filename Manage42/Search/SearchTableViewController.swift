@@ -80,6 +80,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 		
+		
 
 	}
 
@@ -131,8 +132,6 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
 	func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
 
 	}
-
-
 
     // MARK: - Navigation
 

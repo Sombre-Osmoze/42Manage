@@ -32,7 +32,6 @@ extension AuthenticationHandler:  SFSafariViewControllerDelegate {
 
 		if URL.host == Foundation.URL(string: redirect)!.host!, let code = URL.query?.replacingOccurrences(of: "code=", with: "") {
 			controller.dismiss(animated: true, completion: {
-				self.store(auth: code)
 				self.obtainToken(auth: code)
 			})
 		}

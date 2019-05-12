@@ -56,12 +56,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="G8E-Mm-ajv" kind="show" identifier="showUser" id="Owb-sX-J10">
-                                        <segue key="commit" inheritsFrom="parent" id="NtL-hG-9D0"/>
-                                        <segue key="preview" inheritsFrom="commit" id="b65-RF-aB3"/>
-                                    </segue>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -87,8 +81,5 @@
             <point key="canvasLocation" x="476" y="-418"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Owb-sX-J10"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>
 </document>

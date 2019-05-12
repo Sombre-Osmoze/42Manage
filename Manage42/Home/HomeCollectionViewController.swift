@@ -54,8 +54,15 @@ class HomeCollectionViewController: UserCollectionViewController {
 
 	override func viewDidLoad() {
 
-		if let file = UserDefaults.standard.value(forKey: "user") as? Data {
-			user = try? JSONDecoder().decode(UserInformation.self, from: file)
+		guard let file = UserDefaults.standard.value(forKey: "user") as? Data else {
+			controller?.logout()
+			// TODO: Better Handling
+			return
+		}
+
+		user = try? JSONDecoder().decode(UserInformation.self, from: file)
+
+		if user != nil {
 			self.currentCursus = self.user.cursusUsers.first(where: { $0.cursus.name == "42" })!.id
 			user.image = UserDefaults.standard.value(forKey: "picture") as? Data
 		} else {
