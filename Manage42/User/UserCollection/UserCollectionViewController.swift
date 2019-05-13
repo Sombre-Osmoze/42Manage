@@ -15,6 +15,11 @@ class UserCollectionViewController: UICollectionViewController, UIPickerViewDele
 
 	@IBOutlet var cursusPicker: UIPickerView!
 
+
+
+//	@IBOutlet weak var achievementsTableView: UITableView!
+
+
 	// MARK: - User CollectionView Controller
 
 	var user : UserInformation!
@@ -65,11 +70,10 @@ class UserCollectionViewController: UICollectionViewController, UIPickerViewDele
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return 4
     }
 
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
 
 		switch indexPath.row {
 		case 0:
@@ -86,7 +90,12 @@ class UserCollectionViewController: UICollectionViewController, UIPickerViewDele
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graphic", for: indexPath) as! GraphCollectionViewCell
 			cell.load(user: user, cursus: currentCursus)
 			return cell
-		default:
+		case 3:
+			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Achievements", for: indexPath) as! AchievementsCollectionViewCell
+			cell.load(user.achievements.filter({ $0.visible }))
+			return cell
+
+		default: 
 			let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Graph", for: indexPath)
 
 			// Configure the cell

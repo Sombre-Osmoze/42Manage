@@ -35,6 +35,7 @@
 		EDE0D58F21F561A900B9170B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE0D58E21F561A900B9170B /* User.storyboard */; };
 		EDE0D59621F57D1900B9170B /* LevelHistoricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */; };
 		EDE0D59821F58C7100B9170B /* UserCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */; };
+		EDE908FD2288F6F700E668E5 /* AchievementsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE908FC2288F6F700E668E5 /* AchievementsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelHistoricsTableViewController.swift; sourceTree = "<group>"; };
 		EDE0D59721F58C7100B9170B /* UserCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
 		EDE0D59A21F5A47700B9170B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EDE908FC2288F6F700E668E5 /* AchievementsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */,
 				EDE0D59521F57D1900B9170B /* LevelHistoricsTableViewController.swift */,
 				ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */,
+				EDE908FC2288F6F700E668E5 /* AchievementsCollectionViewCell.swift */,
 			);
 			path = UserCollection;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				TargetAttributes = {
 					EDD273342123704500268596 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.AccessWiFi = {
 								enabled = 1;
@@ -477,6 +481,7 @@
 				EDE0D59621F57D1900B9170B /* LevelHistoricsTableViewController.swift in Sources */,
 				ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */,
 				ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */,
+				EDE908FD2288F6F700E668E5 /* AchievementsCollectionViewCell.swift in Sources */,
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
 				ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */,
 				ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */,
@@ -675,7 +680,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -695,7 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
