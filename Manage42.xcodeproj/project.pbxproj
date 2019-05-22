@@ -12,8 +12,8 @@
 		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
-		ED5033CD2295A6D900231BE0 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5033C82295A69B00231BE0 /* API42.framework */; };
-		ED5033CE2295A6D900231BE0 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED5033C82295A69B00231BE0 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED5033D92295BA8200231BE0 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5033C82295A69B00231BE0 /* API42.framework */; };
+		ED5033DA2295BA8200231BE0 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED5033C82295A69B00231BE0 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED56355F21F17899009457AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56355E21F17899009457AF /* Colors.xcassets */; };
 		ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */; };
 		ED56356421F26BCE009457AF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED56356321F26BCE009457AF /* Search.storyboard */; };
@@ -53,14 +53,14 @@
 			remoteGlobalIDString = ED959BED21DF845D00B61435;
 			remoteInfo = API42Tests;
 		};
-		ED5033CB2295A6CD00231BE0 /* PBXContainerItemProxy */ = {
+		ED5033CF2295A6DA00231BE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = ED959BE321DF845D00B61435;
 			remoteInfo = API42;
 		};
-		ED5033CF2295A6DA00231BE0 /* PBXContainerItemProxy */ = {
+		ED5033DB2295BA8200231BE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
 			proxyType = 1;
@@ -84,13 +84,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ED5033D12295A6DA00231BE0 /* Embed Frameworks */ = {
+		ED5033DD2295BA8200231BE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ED5033CE2295A6D900231BE0 /* API42.framework in Embed Frameworks */,
+				ED5033DA2295BA8200231BE0 /* API42.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,7 +165,7 @@
 				EDD273682123767A00268596 /* AuthenticationServices.framework in Frameworks */,
 				ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */,
 				ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */,
-				ED5033CD2295A6D900231BE0 /* API42.framework in Frameworks */,
+				ED5033D92295BA8200231BE0 /* API42.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,13 +355,13 @@
 				EDD273322123704500268596 /* Frameworks */,
 				EDD273332123704500268596 /* Resources */,
 				ED959CAF21E2A22300B61435 /* Embed Watch Content */,
-				ED5033D12295A6DA00231BE0 /* Embed Frameworks */,
+				ED5033DD2295BA8200231BE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ED5033CC2295A6CD00231BE0 /* PBXTargetDependency */,
 				ED5033D02295A6DA00231BE0 /* PBXTargetDependency */,
+				ED5033DC2295BA8200231BE0 /* PBXTargetDependency */,
 			);
 			name = Manage42;
 			productName = 42Manage;
@@ -573,15 +573,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ED5033CC2295A6CD00231BE0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = API42;
-			targetProxy = ED5033CB2295A6CD00231BE0 /* PBXContainerItemProxy */;
-		};
 		ED5033D02295A6DA00231BE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = API42;
 			targetProxy = ED5033CF2295A6DA00231BE0 /* PBXContainerItemProxy */;
+		};
+		ED5033DC2295BA8200231BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = API42;
+			targetProxy = ED5033DB2295BA8200231BE0 /* PBXContainerItemProxy */;
 		};
 		EDD273932123785200268596 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
