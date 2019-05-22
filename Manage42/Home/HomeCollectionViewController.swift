@@ -44,12 +44,6 @@ class HomeCollectionViewController: UserCollectionViewController {
 		self.collectionView.reloadData()
 	}
 
-	// MARK: - Storyboard
-
-
-
-
-
 	// MARK: - User Collection ViewController
 
 	override func viewDidLoad() {
@@ -74,6 +68,12 @@ class HomeCollectionViewController: UserCollectionViewController {
 		super.viewDidLoad()
 
 		navigationItem.title = ("Welcome " + user.firstName)
-
 	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+
+		refreshOwnerData()
+	}
+
 }

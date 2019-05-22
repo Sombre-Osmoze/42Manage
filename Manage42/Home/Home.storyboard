@@ -219,38 +219,38 @@
                                     </segue>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Achievements" reuseIdentifier="Achievements" id="197-iD-JVJ" customClass="AchievementsCollectionViewCell" customModule="Manage42" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Achievements" reuseIdentifier="Achievements" id="TTQ-hK-Wh3" customClass="AchievementsCollectionViewCell" customModule="Manage42" customModuleProvider="target">
                                 <rect key="frame" x="1.6666666666666667" y="573" width="372" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="372" height="284"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akT-A8-bmC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DE-xQ-Npr">
                                             <rect key="frame" x="20.000000000000007" y="20" width="107.66666666666669" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementsTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MCN-3N-Xzf">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementsTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ir-lh-nhe">
                                             <rect key="frame" x="20" y="49" width="332" height="215"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementCell" textLabel="vaw-s7-PIi" detailTextLabel="fwB-Rb-h5c" rowHeight="108" style="IBUITableViewCellStyleSubtitle" id="cbs-Fn-79P">
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementCell" textLabel="wih-do-6Mu" detailTextLabel="Bgb-ax-qb8" rowHeight="108" style="IBUITableViewCellStyleSubtitle" id="uZQ-cU-Pzz">
                                                     <rect key="frame" x="0.0" y="28" width="332" height="108"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cbs-Fn-79P" id="xQW-yj-Nyq">
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uZQ-cU-Pzz" id="UpC-98-e9L">
                                                         <rect key="frame" x="0.0" y="0.0" width="332" height="107.66666666666667"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="AchievementTitle" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vaw-s7-PIi">
+                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="AchievementTitle" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wih-do-6Mu">
                                                                 <rect key="frame" x="14.999999999999996" y="32.666666666666664" width="36.666666666666664" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fwB-Rb-h5c">
+                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bgb-ax-qb8">
                                                                 <rect key="frame" x="15" y="59.000000000000007" width="32.666666666666664" height="14.333333333333334"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -262,22 +262,22 @@
                                                 </tableViewCell>
                                             </prototypes>
                                             <connections>
-                                                <outlet property="dataSource" destination="197-iD-JVJ" id="prU-sC-zYz"/>
+                                                <outlet property="dataSource" destination="TTQ-hK-Wh3" id="wAS-Wu-WfK"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="MCN-3N-Xzf" secondAttribute="bottom" constant="12" id="JSO-KK-X7j"/>
-                                    <constraint firstItem="akT-A8-bmC" firstAttribute="leading" secondItem="197-iD-JVJ" secondAttribute="leadingMargin" constant="12" id="Pct-Ny-RgS"/>
-                                    <constraint firstItem="akT-A8-bmC" firstAttribute="top" secondItem="197-iD-JVJ" secondAttribute="top" constant="20" id="Rii-La-9Cg"/>
-                                    <constraint firstItem="MCN-3N-Xzf" firstAttribute="leading" secondItem="197-iD-JVJ" secondAttribute="leadingMargin" constant="12" id="Uwe-sq-m9E"/>
-                                    <constraint firstItem="MCN-3N-Xzf" firstAttribute="top" secondItem="akT-A8-bmC" secondAttribute="bottom" constant="8" id="oIN-Mg-Ipd"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="MCN-3N-Xzf" secondAttribute="trailing" constant="12" id="xrO-7G-kp3"/>
+                                    <constraint firstItem="7DE-xQ-Npr" firstAttribute="top" secondItem="TTQ-hK-Wh3" secondAttribute="top" constant="20" id="2tq-zQ-jtM"/>
+                                    <constraint firstItem="7DE-xQ-Npr" firstAttribute="leading" secondItem="TTQ-hK-Wh3" secondAttribute="leadingMargin" constant="12" id="3en-uf-e4g"/>
+                                    <constraint firstItem="6Ir-lh-nhe" firstAttribute="leading" secondItem="TTQ-hK-Wh3" secondAttribute="leadingMargin" constant="12" id="FVe-fv-eFH"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6Ir-lh-nhe" secondAttribute="trailing" constant="12" id="MGx-qy-XaD"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6Ir-lh-nhe" secondAttribute="bottom" constant="12" id="S4D-O7-BwV"/>
+                                    <constraint firstItem="6Ir-lh-nhe" firstAttribute="top" secondItem="7DE-xQ-Npr" secondAttribute="bottom" constant="8" id="TVQ-2j-d6O"/>
                                 </constraints>
                                 <size key="customSize" width="372" height="284"/>
                                 <connections>
-                                    <outlet property="tableView" destination="MCN-3N-Xzf" id="bp2-Lc-ula"/>
+                                    <outlet property="tableView" destination="6Ir-lh-nhe" id="GEf-dU-GWs"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
