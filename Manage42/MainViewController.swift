@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import API42
 
-class MainViewController: UITabBarController, SFSafariViewControllerDelegate {
+class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
 		super.viewDidLoad()
