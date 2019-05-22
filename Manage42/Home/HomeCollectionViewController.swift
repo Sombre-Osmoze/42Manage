@@ -15,10 +15,10 @@ class HomeCollectionViewController: UserCollectionViewController {
 	// MARK: - HomeCollectionViewController
 
 	func refreshOwnerData() -> Void {
-		controller?.ownerInformation(completion: { (owner, error) in
+		controller?.ownerInformation { (owner, error) in
 			if error == nil, owner != nil {
 				self.user = owner!
-				controller?.user(image: owner!.imageUrl!, completion: { (data, error) in
+				controller?.user(image: owner!.imageUrl!) { (data, error) in
 					if error == nil, let dataC = data {
 						self.user.image = dataC
 						if let file = try? JSONEncoder().encode(self.user) {
@@ -31,11 +31,11 @@ class HomeCollectionViewController: UserCollectionViewController {
 					DispatchQueue.main.async {
 						self.loadOwnerData()
 					}
-				})
+				}
 			} else {
 				print(error.debugDescription)
 			}
-		})
+		}
 	}
  
 	func loadOwnerData() -> Void {

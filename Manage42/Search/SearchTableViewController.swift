@@ -19,7 +19,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
 
 
 	func search() -> Void {
-		controller?.search(user: searchController.searchBar.text!, page: pages, completion: { (usersData, error) in
+		controller?.search(user: searchController.searchBar.text!, page: pages) { (usersData, error) in
 			if error == nil, let users = usersData {
 				self.users += users
 				DispatchQueue.main.async {
@@ -28,7 +28,7 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
 			} else {
 				print(error!)
 			}
-		})
+		}
 	}
 
     override func viewDidLoad() {

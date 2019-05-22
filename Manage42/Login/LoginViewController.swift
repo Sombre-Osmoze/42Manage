@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
 		auth = AuthenticationHandler(completion: { (step, error) in
 			self.eventHandling(step)
 			if step == .owner, error == nil, auth!.owner?.imageUrl != nil  {
-				controller?.user(image: auth!.owner!.imageUrl!, completion: { (data, error) in
+				controller?.user(image: auth!.owner!.imageUrl!) { (data, error) in
 						if error == nil, let dataC = data {
 							DispatchQueue.main.async {
 								self.userPicture.image = UIImage(data: dataC)
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
 							}
 						}
 						auth?.step = .terminated
-					})
+					}
 			} else if step == .session {
 				controller = auth?.controller
 			}
