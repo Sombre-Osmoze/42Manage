@@ -55,7 +55,9 @@ class UserCollectionViewController: UICollectionViewController, UIPickerViewDele
 		case "showHistorics":
 			let dest = segue.destination as! LevelHistoricsViewController
 			dest.historic(user.projectsUsers, for: user.cursusUsers.first(where: { $0.id == currentCursus})!.cursus.id)
-		default:
+        case "showGraph":
+            print("Go to HolyGraph")
+        default:
 			fatalError("Unexpected segue identifier: \(segue.debugDescription)")
 		}
 	}
