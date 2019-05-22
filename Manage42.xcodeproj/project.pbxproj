@@ -356,6 +356,7 @@
 				EDD273332123704500268596 /* Resources */,
 				ED959CAF21E2A22300B61435 /* Embed Watch Content */,
 				ED5033D12295A6DA00231BE0 /* Embed Frameworks */,
+				ED5033D22295A8EF00231BE0 /* Submodule update */,
 			);
 			buildRules = (
 			);
@@ -531,6 +532,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED5033D22295A8EF00231BE0 /* Submodule update */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Submodule update";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [ ! -d \"$PROJECT_DIR/API42\" ]; then\n# Control will enter here if $DIRECTORY doesn't exist.\ncd $PROJECT_DIR\ngit submodule update --init --recursive\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDD273312123704500268596 /* Sources */ = {
