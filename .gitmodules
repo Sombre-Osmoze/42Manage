@@ -1,0 +1,3 @@
+[submodule "API42"]
+	path = API42
+	url = https://github.com/Sombre-Osmoze/API42.git
