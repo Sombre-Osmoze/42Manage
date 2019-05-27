@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
 		ED959CB721E3C19900B61435 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED959CB621E3C19900B61435 /* Home.storyboard */; };
 		ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959CBA21E3D47400B61435 /* MainViewController.swift */; };
+		EDC86001229BE66A00A19DF7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC86000229BE66A00A19DF7 /* Projects.storyboard */; };
 		EDD273392123704500268596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD273382123704500268596 /* AppDelegate.swift */; };
 		EDD2733E2123704500268596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733C2123704500268596 /* Main.storyboard */; };
 		EDD273402123704700268596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733F2123704700268596 /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		ED959CA421E2A22300B61435 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		ED959CB621E3C19900B61435 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		ED959CBA21E3D47400B61435 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EDC86000229BE66A00A19DF7 /* Projects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Projects.storyboard; sourceTree = "<group>"; };
 		EDD273352123704500268596 /* Manage42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manage42.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD273382123704500268596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD2733D2123704500268596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,6 +232,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		EDC85FFF229BE61B00A19DF7 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				EDC86000229BE66A00A19DF7 /* Projects.storyboard */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
 		EDD2732C2123704500268596 = {
 			isa = PBXGroup;
 			children = (
@@ -266,10 +276,11 @@
 				ED56355E21F17899009457AF /* Colors.xcassets */,
 				EDD2733C2123704500268596 /* Main.storyboard */,
 				ED959CBA21E3D47400B61435 /* MainViewController.swift */,
-				EDE0D58D21F5618F00B9170B /* User */,
-				ED56356221F26BBD009457AF /* Search */,
 				ED959CB521E3C18E00B61435 /* Home */,
 				EDD2736A212376E800268596 /* Login */,
+				EDC85FFF229BE61B00A19DF7 /* Projects */,
+				ED56356221F26BBD009457AF /* Search */,
+				EDE0D58D21F5618F00B9170B /* User */,
 			);
 			path = Manage42;
 			sourceTree = "<group>";
@@ -409,6 +420,7 @@
 					EDD273342123704500268596 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.AccessWiFi = {
 								enabled = 1;
@@ -441,16 +453,19 @@
 					};
 					EDD2738C2123785200268596 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
 						TestTargetID = EDD273342123704500268596;
 					};
 					EDD2739A2123785900268596 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = EDD273342123704500268596;
 					};
 				};
 			};
 			buildConfigurationList = EDD273302123704500268596 /* Build configuration list for PBXProject "Manage42" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -504,6 +519,7 @@
 				ED56356421F26BCE009457AF /* Search.storyboard in Resources */,
 				EDE0D58F21F561A900B9170B /* User.storyboard in Resources */,
 				EDD273402123704700268596 /* Assets.xcassets in Resources */,
+				EDC86001229BE66A00A19DF7 /* Projects.storyboard in Resources */,
 				EDD2733E2123704500268596 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,8 +736,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -735,10 +750,7 @@
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = "$(SRCROOT)/Manage42/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -755,10 +767,7 @@
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = "$(SRCROOT)/Manage42/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -773,14 +782,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = Manage42Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manage42.app/Manage42";
 			};
@@ -793,14 +798,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = Manage42Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Manage42.app/Manage42";
 			};
@@ -812,11 +813,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = Manage42UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -831,11 +828,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				INFOPLIST_FILE = Manage42UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.osmoze.Manage42UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
