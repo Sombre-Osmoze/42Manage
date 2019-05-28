@@ -9,6 +9,7 @@
 import UIKit
 import API42
 import SafariServices
+import os.log
 
 var auth : AuthenticationHandler? = nil
 var controller : ControllerAPI? = nil
@@ -24,10 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		do {
 			controller =  ControllerAPI(token: try Token())
+			if UserDefaults.standard.value(forKey: "user") == nil {
+				throw CachedData.noUser
+			}
 		} catch  {
-			print(error)
+			// TODO: Better work here
+			os_log(.info, "Can't create session because: %s", error.localizedDescription)
 			askAccount()
 		}
+
+
 
 		return true
 	}
