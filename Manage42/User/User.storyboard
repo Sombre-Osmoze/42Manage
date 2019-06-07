@@ -287,10 +287,10 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Achievements" reuseIdentifier="Achievements" id="C9S-5Q-VbO" customClass="AchievementsCollectionViewCell" customModule="Manage42" customModuleProvider="target">
-                                <rect key="frame" x="1.6666666666666667" y="573" width="372" height="181"/>
+                                <rect key="frame" x="1.6666666666666667" y="573" width="372" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="372" height="181"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="372" height="284"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-ha-CdJ">

@@ -66,23 +66,14 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "User", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchUserCell", for: indexPath) as! SearchTableViewCell
 
 		let user = users[indexPath.row]
+		cell.load(user: user)
 
-        // Configure the cell...
-		cell.textLabel?.text = user.login
-		cell.detailTextLabel?.text = user.id.description
         return cell
     }
 
-
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-		
-		
-
-	}
 
     /*
     // Override to support conditional editing of the table view.
@@ -139,8 +130,11 @@ class SearchTableViewController: UITableViewController, UITableViewDataSourcePre
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+		super.prepare(for: segue, sender: sender)
 
-
+		if segue.identifier == "ScopeUser" {
+			print(sender.debugDescription)
+		}
 		
     }
 

@@ -43,27 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ED5033C72295A69B00231BE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ED959BE421DF845D00B61435;
-			remoteInfo = API42;
-		};
-		ED5033C92295A69B00231BE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ED959BED21DF845D00B61435;
-			remoteInfo = API42Tests;
-		};
-		ED5033DB2295BA8200231BE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = ED959BE321DF845D00B61435;
-			remoteInfo = API42;
-		};
 		EDD273922123785200268596 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDD2732D2123704500268596 /* Project object */;
@@ -111,7 +90,6 @@
 		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCollectionViewCell.swift; sourceTree = "<group>"; };
-		ED5033C22295A69B00231BE0 /* API42.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API42.xcodeproj; path = API42/API42.xcodeproj; sourceTree = "<group>"; };
 		ED550F8D22A6B30400E98923 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		ED56355E21F17899009457AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -195,15 +173,6 @@
 			path = Forums;
 			sourceTree = "<group>";
 		};
-		ED5033C32295A69B00231BE0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ED5033C82295A69B00231BE0 /* API42.framework */,
-				ED5033CA2295A69B00231BE0 /* API42Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		ED56356221F26BBD009457AF /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				EDE0D59A21F5A47700B9170B /* README.md */,
-				ED5033C22295A69B00231BE0 /* API42.xcodeproj */,
 				EDD273372123704500268596 /* Manage42 */,
 				EDD2738E2123785200268596 /* Manage42Tests */,
 				EDD2739C2123785900268596 /* Manage42UITests */,
@@ -381,7 +349,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				ED5033DC2295BA8200231BE0 /* PBXTargetDependency */,
 			);
 			name = Manage42;
 			productName = 42Manage;
@@ -492,12 +459,6 @@
 			mainGroup = EDD2732C2123704500268596;
 			productRefGroup = EDD273362123704500268596 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ED5033C32295A69B00231BE0 /* Products */;
-					ProjectRef = ED5033C22295A69B00231BE0 /* API42.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EDD273342123704500268596 /* Manage42 */,
@@ -506,23 +467,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		ED5033C82295A69B00231BE0 /* API42.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = API42.framework;
-			remoteRef = ED5033C72295A69B00231BE0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ED5033CA2295A69B00231BE0 /* API42Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = API42Tests.xctest;
-			remoteRef = ED5033C92295A69B00231BE0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EDD273332123704500268596 /* Resources */ = {
@@ -601,11 +545,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ED5033DC2295BA8200231BE0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = API42;
-			targetProxy = ED5033DB2295BA8200231BE0 /* PBXContainerItemProxy */;
-		};
 		EDD273932123785200268596 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDD273342123704500268596 /* Manage42 */;
