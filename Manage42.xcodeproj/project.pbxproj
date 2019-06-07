@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,6 @@
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
 		ED550F8E22A6B30400E98923 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED550F8D22A6B30400E98923 /* ProjectsTableViewController.swift */; };
-		ED5513FE22961734005FC6D1 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; };
-		ED5513FF22961734005FC6D1 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED56355F21F17899009457AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56355E21F17899009457AF /* Colors.xcassets */; };
 		ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */; };
 		ED56356421F26BCE009457AF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED56356321F26BCE009457AF /* Search.storyboard */; };
@@ -26,6 +24,8 @@
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
 		ED959CB721E3C19900B61435 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED959CB621E3C19900B61435 /* Home.storyboard */; };
 		ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959CBA21E3D47400B61435 /* MainViewController.swift */; };
+		EDB8828E22AAE317007EA930 /* API42 in Frameworks */ = {isa = PBXBuildFile; productRef = EDB8828D22AAE317007EA930 /* API42 */; };
+		EDB8828F22AAE317007EA930 /* API42 in Embed Frameworks */ = {isa = PBXBuildFile; productRef = EDB8828D22AAE317007EA930 /* API42 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		EDC86001229BE66A00A19DF7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC86000229BE66A00A19DF7 /* Projects.storyboard */; };
 		EDD273392123704500268596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD273382123704500268596 /* AppDelegate.swift */; };
 		EDD2733E2123704500268596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733C2123704500268596 /* Main.storyboard */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ED5513FF22961734005FC6D1 /* API42.framework in Embed Frameworks */,
+				EDB8828F22AAE317007EA930 /* API42 in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +144,7 @@
 				EDD273682123767A00268596 /* AuthenticationServices.framework in Frameworks */,
 				ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */,
 				ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */,
-				ED5513FE22961734005FC6D1 /* API42.framework in Frameworks */,
+				EDB8828E22AAE317007EA930 /* API42 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +349,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				EDB8829122AAE32E007EA930 /* PBXTargetDependency */,
 			);
 			name = Manage42;
+			packageProductDependencies = (
+				EDB8828D22AAE317007EA930 /* API42 */,
+			);
 			productName = 42Manage;
 			productReference = EDD273352123704500268596 /* Manage42.app */;
 			productType = "com.apple.product-type.application";
@@ -457,6 +461,9 @@
 				Base,
 			);
 			mainGroup = EDD2732C2123704500268596;
+			packageReferences = (
+				EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */,
+			);
 			productRefGroup = EDD273362123704500268596 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -545,6 +552,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EDB8829122AAE32E007EA930 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = EDB8829022AAE32E007EA930 /* API42 */;
+		};
 		EDD273932123785200268596 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDD273342123704500268596 /* Manage42 */;
@@ -859,6 +870,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Sombre-Osmoze/API42.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDB8828D22AAE317007EA930 /* API42 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */;
+			productName = API42;
+		};
+		EDB8829022AAE32E007EA930 /* API42 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */;
+			productName = API42;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDD2732D2123704500268596 /* Project object */;
 }
