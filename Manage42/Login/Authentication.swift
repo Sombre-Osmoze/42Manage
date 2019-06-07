@@ -30,7 +30,7 @@ extension AuthenticationHandler:  SFSafariViewControllerDelegate {
 
 	public func safariViewController(_ controller: SFSafariViewController, initialLoadDidRedirectTo URL: URL) {
 
-		if URL.query != nil, let code = URL.query?.replacingOccurrences(of: "code=", with: "") {
+		if URL.host == Foundation.URL(string: redirect)!.host!, let code = URL.query?.replacingOccurrences(of: "code=", with: "") {
 			controller.dismiss(animated: true, completion: {
 				self.obtainToken(auth: code)
 			})

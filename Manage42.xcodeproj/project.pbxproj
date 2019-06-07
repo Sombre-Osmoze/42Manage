@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED008560229C71BF0049ACAE /* Forums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED00855F229C71BF0049ACAE /* Forums.storyboard */; };
 		ED33086D21EBC4480062162D /* UserViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086C21EBC4480062162D /* UserViews.swift */; };
 		ED33086F21EBFF310062162D /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */; };
 		ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */; };
 		ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3EB26721ED0AC8002B9F4D /* GameKit.framework */; };
 		ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */; };
+		ED550F8E22A6B30400E98923 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED550F8D22A6B30400E98923 /* ProjectsTableViewController.swift */; };
 		ED5513FE22961734005FC6D1 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; };
 		ED5513FF22961734005FC6D1 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED56355F21F17899009457AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED56355E21F17899009457AF /* Colors.xcassets */; };
@@ -102,12 +104,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED00855F229C71BF0049ACAE /* Forums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forums.storyboard; sourceTree = "<group>"; };
 		ED33086C21EBC4480062162D /* UserViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViews.swift; sourceTree = "<group>"; };
 		ED33086E21EBFF310062162D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		ED3EB26521ED0902002B9F4D /* CursusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursusProgressView.swift; sourceTree = "<group>"; };
 		ED3EB26721ED0AC8002B9F4D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		ED3EB26921F02699002B9F4D /* BasicInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED5033C22295A69B00231BE0 /* API42.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API42.xcodeproj; path = API42/API42.xcodeproj; sourceTree = "<group>"; };
+		ED550F8D22A6B30400E98923 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		ED56355E21F17899009457AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED56356321F26BCE009457AF /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -181,6 +185,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED00855E229C719E0049ACAE /* Forums */ = {
+			isa = PBXGroup;
+			children = (
+				ED00855F229C71BF0049ACAE /* Forums.storyboard */,
+			);
+			path = Forums;
+			sourceTree = "<group>";
+		};
 		ED5033C32295A69B00231BE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC86000229BE66A00A19DF7 /* Projects.storyboard */,
+				ED550F8D22A6B30400E98923 /* ProjectsTableViewController.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -276,6 +289,7 @@
 				ED56355E21F17899009457AF /* Colors.xcassets */,
 				EDD2733C2123704500268596 /* Main.storyboard */,
 				ED959CBA21E3D47400B61435 /* MainViewController.swift */,
+				ED00855E229C719E0049ACAE /* Forums */,
 				ED959CB521E3C18E00B61435 /* Home */,
 				EDD2736A212376E800268596 /* Login */,
 				EDC85FFF229BE61B00A19DF7 /* Projects */,
@@ -516,6 +530,7 @@
 				ED959CB721E3C19900B61435 /* Home.storyboard in Resources */,
 				EDD273432123704700268596 /* LaunchScreen.storyboard in Resources */,
 				ED56355F21F17899009457AF /* Colors.xcassets in Resources */,
+				ED008560229C71BF0049ACAE /* Forums.storyboard in Resources */,
 				ED56356421F26BCE009457AF /* Search.storyboard in Resources */,
 				EDE0D58F21F561A900B9170B /* User.storyboard in Resources */,
 				EDD273402123704700268596 /* Assets.xcassets in Resources */,
@@ -547,6 +562,7 @@
 			files = (
 				ED3EB26621ED0902002B9F4D /* CursusProgressView.swift in Sources */,
 				EDE0D58C21F52C2100B9170B /* GraphCollectionViewCell.swift in Sources */,
+				ED550F8E22A6B30400E98923 /* ProjectsTableViewController.swift in Sources */,
 				ED33086D21EBC4480062162D /* UserViews.swift in Sources */,
 				ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */,
 				EDE0D59821F58C7100B9170B /* UserCollectionViewController.swift in Sources */,

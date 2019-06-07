@@ -82,6 +82,9 @@ class LoginViewController: UIViewController {
 				self.nameLabel.text = owner.displayName
 				self.loginLabel.text = owner.login
 				self.loginLabel.isHidden = false
+				if let file = try? JSONEncoder().encode(auth!.owner!) {
+					UserDefaults.standard.setValue(file, forKey: "user")
+				}
 			case .oath2:
 				self.stepLabel.text = "Metadata sorting"
 				self.stepProgress.setProgress(2/7, animated: true)
