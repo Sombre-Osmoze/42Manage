@@ -24,8 +24,8 @@
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
 		ED959CB721E3C19900B61435 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED959CB621E3C19900B61435 /* Home.storyboard */; };
 		ED959CBB21E3D47400B61435 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959CBA21E3D47400B61435 /* MainViewController.swift */; };
-		EDB8828E22AAE317007EA930 /* API42 in Frameworks */ = {isa = PBXBuildFile; productRef = EDB8828D22AAE317007EA930 /* API42 */; };
-		EDB8828F22AAE317007EA930 /* API42 in Embed Frameworks */ = {isa = PBXBuildFile; productRef = EDB8828D22AAE317007EA930 /* API42 */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EDB8829222AAE3A0007EA930 /* API42.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; };
+		EDB8829322AAE3A0007EA930 /* API42.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0821E0E26400B61435 /* API42.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDC86001229BE66A00A19DF7 /* Projects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC86000229BE66A00A19DF7 /* Projects.storyboard */; };
 		EDD273392123704500268596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD273382123704500268596 /* AppDelegate.swift */; };
 		EDD2733E2123704500268596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD2733C2123704500268596 /* Main.storyboard */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EDB8828F22AAE317007EA930 /* API42 in Embed Frameworks */,
+				EDB8829322AAE3A0007EA930 /* API42.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB8829222AAE3A0007EA930 /* API42.framework in Frameworks */,
 				EDD273682123767A00268596 /* AuthenticationServices.framework in Frameworks */,
 				ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */,
 				ED3EB26821ED0AC8002B9F4D /* GameKit.framework in Frameworks */,
-				EDB8828E22AAE317007EA930 /* API42 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,11 +349,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				EDB8829122AAE32E007EA930 /* PBXTargetDependency */,
 			);
 			name = Manage42;
 			packageProductDependencies = (
-				EDB8828D22AAE317007EA930 /* API42 */,
 			);
 			productName = 42Manage;
 			productReference = EDD273352123704500268596 /* Manage42.app */;
@@ -552,10 +550,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EDB8829122AAE32E007EA930 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = EDB8829022AAE32E007EA930 /* API42 */;
-		};
 		EDD273932123785200268596 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDD273342123704500268596 /* Manage42 */;
@@ -881,19 +875,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EDB8828D22AAE317007EA930 /* API42 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */;
-			productName = API42;
-		};
-		EDB8829022AAE32E007EA930 /* API42 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EDB8828C22AAE317007EA930 /* XCRemoteSwiftPackageReference "API42" */;
-			productName = API42;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDD2732D2123704500268596 /* Project object */;
 }
