@@ -20,6 +20,7 @@
 		ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */; };
 		ED56356421F26BCE009457AF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED56356321F26BCE009457AF /* Search.storyboard */; };
 		ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED56356521F26D4E009457AF /* SearchTableViewController.swift */; };
+		ED883C7322AAC48500EA502B /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED883C7222AAC48500EA502B /* SearchTableViewCell.swift */; };
 		ED959C0121DF969C00B61435 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED959C0021DF969C00B61435 /* StoreKit.framework */; };
 		ED959C0321DF98A200B61435 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0221DF98A200B61435 /* LoginViewController.swift */; };
 		ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED959C0421E0DB9600B61435 /* Authentication.swift */; };
@@ -116,6 +117,7 @@
 		ED56356021F18B50009457AF /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED56356321F26BCE009457AF /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		ED56356521F26D4E009457AF /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		ED883C7222AAC48500EA502B /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		ED959C0021DF969C00B61435 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ED959C0221DF98A200B61435 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED959C0421E0DB9600B61435 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				ED56356321F26BCE009457AF /* Search.storyboard */,
+				ED883C7222AAC48500EA502B /* SearchTableViewCell.swift */,
 				ED56356521F26D4E009457AF /* SearchTableViewController.swift */,
 			);
 			path = Search;
@@ -573,6 +576,7 @@
 				EDD273392123704500268596 /* AppDelegate.swift in Sources */,
 				ED56356121F18B50009457AF /* PictureCollectionViewCell.swift in Sources */,
 				ED56356621F26D4E009457AF /* SearchTableViewController.swift in Sources */,
+				ED883C7322AAC48500EA502B /* SearchTableViewCell.swift in Sources */,
 				ED959C0521E0DB9600B61435 /* Authentication.swift in Sources */,
 				ED3EB26A21F02699002B9F4D /* BasicInformationCollectionViewCell.swift in Sources */,
 			);

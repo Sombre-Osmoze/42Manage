@@ -56,6 +56,8 @@ class LoginViewController: UIViewController {
 		present(auth!.createSafariView(), animated: true, completion: nil)
 	}
 
+	private var user : UserInformation? = nil
+
 	func eventHandling(_ step: AuthenticationHandler.AuthStep) -> Void {
 		DispatchQueue.main.async {
 			switch step {
@@ -66,9 +68,9 @@ class LoginViewController: UIViewController {
 			case .terminated:
 				self.stepLabel.text = "Finishing..."
 				self.stepProgress.setProgress(7/7, animated: true)
-				auth?.step = .none
-				self.performSegue(withIdentifier: "Load", sender: auth!.owner)
+				self.performSegue(withIdentifier: "Load", sender: nil)
 				auth = nil
+				auth?.step = .none
 			case .code:
 				self.stepLabel.text = "Credentials storage..."
 				self.stepProgress.setProgress(3/7, animated: true)
@@ -78,9 +80,9 @@ class LoginViewController: UIViewController {
 			case .owner:
 				self.stepLabel.text = "Collecting user informations..."
 				self.stepProgress.setProgress(6/7, animated: true)
-				let owner = auth!.owner!
-				self.nameLabel.text = owner.displayName
-				self.loginLabel.text = owner.login
+				let user = auth!.owner!
+				self.nameLabel.text = user.displayName
+				self.loginLabel.text = user.login
 				self.loginLabel.isHidden = false
 				if let file = try? JSONEncoder().encode(auth!.owner!) {
 					UserDefaults.standard.setValue(file, forKey: "user")

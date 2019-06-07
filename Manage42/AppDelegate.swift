@@ -23,17 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 
-		do {
-			controller =  ControllerAPI(token: try Token())
-			if UserDefaults.standard.value(forKey: "user") == nil {
-				throw CachedData.noUser
-			}
-		} catch  {
-			// TODO: Better work here
-			os_log(.info, "Can't create session because: %s", error.localizedDescription)
-			askAccount()
-		}
-
+//		do {
+//			controller =  ControllerAPI(token: try Token())
+//			if true, UserDefaults.standard.value(forKey: "user") == nil {
+//				throw CachedData.noUser
+//			}
+//		} catch  {
+//			// TODO: Better work here
+//			os_log(.info, "Can't create session because: %s", error.localizedDescription)
+//			askAccount()
+//		}
+		askAccount()
 
 
 		return true

@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="0s1-IM-gJ9" id="dEj-2y-fNu"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Projects" image="Suitcase" id="7AK-r0-mI1"/>
+                    <tabBarItem key="tabBarItem" title="Projects" image="globe" catalog="system" id="7AK-r0-mI1"/>
                     <navigationItem key="navigationItem" title="Projects" id="462-h0-qcN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -72,7 +72,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Suitcase" width="31" height="26"/>
+        <image name="globe" catalog="system" width="64" height="62"/>
     </resources>
     <color key="tintColor" name="Tint"/>
 </document>

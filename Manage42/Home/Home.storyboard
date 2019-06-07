@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i76-4g-XXg">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i76-4g-XXg">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -133,7 +132,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" text="42" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DED-sQ-Vgh">
-                                            <rect key="frame" x="75.666666666666657" y="74.333333333333329" width="276.33333333333337" height="21"/>
+                                            <rect key="frame" x="75.666666666666657" y="73.666666666666671" width="276.33333333333337" height="22"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -220,10 +219,10 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Achievements" reuseIdentifier="Achievements" id="TTQ-hK-Wh3" customClass="AchievementsCollectionViewCell" customModule="Manage42" customModuleProvider="target">
-                                <rect key="frame" x="1.6666666666666667" y="573" width="372" height="284"/>
+                                <rect key="frame" x="1.6666666666666667" y="573" width="372" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="372" height="284"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="372" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DE-xQ-Npr">
@@ -233,25 +232,25 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementsTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ir-lh-nhe">
-                                            <rect key="frame" x="20" y="49" width="332" height="215"/>
+                                            <rect key="frame" x="20" y="49" width="332" height="112"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AchievementCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementCell" textLabel="wih-do-6Mu" detailTextLabel="Bgb-ax-qb8" rowHeight="108" style="IBUITableViewCellStyleSubtitle" id="uZQ-cU-Pzz">
                                                     <rect key="frame" x="0.0" y="28" width="332" height="108"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uZQ-cU-Pzz" id="UpC-98-e9L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="107.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="108"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="AchievementTitle" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wih-do-6Mu">
-                                                                <rect key="frame" x="14.999999999999996" y="32.666666666666664" width="36.666666666666664" height="23"/>
+                                                                <rect key="frame" x="15" y="32.666666666666664" width="37" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bgb-ax-qb8">
-                                                                <rect key="frame" x="15" y="59.000000000000007" width="32.666666666666664" height="14.333333333333334"/>
+                                                                <rect key="frame" x="15" y="59.000000000000007" width="32.666666666666664" height="14.333333333333336"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
@@ -286,7 +285,7 @@
                             <outlet property="delegate" destination="I6y-gZ-T5N" id="2Wy-z9-KB2"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Me" image="Me" id="IQj-5N-TEb"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" id="IQj-5N-TEb"/>
                     <navigationItem key="navigationItem" title="Welcome" id="RWM-tP-0gn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -324,14 +323,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Me" width="26" height="28"/>
         <image name="default" width="116.66666412353516" height="116.66666412353516"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <namedColor name="Tint">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="itW-df-8Is"/>
+        <segue reference="BsD-lg-CDs"/>
         <segue reference="P4Y-c1-Sni"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>

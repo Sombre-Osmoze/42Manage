@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cD4-0F-cTa">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cD4-0F-cTa">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Me-->
         <scene sceneID="Oq6-Se-j4x">
             <objects>
                 <viewController id="R1t-OY-qWC" sceneMemberID="viewController">
@@ -19,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ux8-vG-gBG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="Me" id="tqr-bB-lYo"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" id="tqr-bB-lYo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBC-Gw-dCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,7 +35,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dfK-G9-Zak"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Projects" id="fx1-V0-BRb"/>
+                    <tabBarItem key="tabBarItem" title="Projects" image="globe" catalog="system" id="fx1-V0-BRb"/>
                     <navigationItem key="navigationItem" id="827-UJ-PHi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -71,7 +70,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lea-YO-Q5Z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Forums" id="nOM-I4-gjz"/>
+                    <tabBarItem key="tabBarItem" title="Forums" image="bubble.left.and.bubble.right.fill" catalog="system" id="nOM-I4-gjz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7H-7S-CHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,7 +117,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Me" width="26" height="28"/>
+        <image name="bubble.left.and.bubble.right.fill" catalog="system" width="64" height="48"/>
+        <image name="globe" catalog="system" width="64" height="62"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <color key="tintColor" name="Tint"/>
 </document>
