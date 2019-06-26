@@ -50,7 +50,6 @@ class HomeCollectionViewController: UserCollectionViewController {
 
 		guard let file = UserDefaults.standard.value(forKey: "user") as? Data else {
 			controller?.logout()
-			// TODO: Better Handling
 			return
 		}
 
@@ -61,8 +60,6 @@ class HomeCollectionViewController: UserCollectionViewController {
 			user.image = UserDefaults.standard.value(forKey: "picture") as? Data
 		} else {
 			controller?.logout()
-			// TODO: Better Handling
-			fatalError("No owner file")
 		}
 
 		super.viewDidLoad()
