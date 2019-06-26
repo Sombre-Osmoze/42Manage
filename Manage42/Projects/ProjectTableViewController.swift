@@ -1,19 +1,17 @@
 //
-//  ProjectsTableViewController.swift
+//  ProjectTableViewController.swift
 //  Manage42
 //
-//  Created by Marcus Florentin on 04/06/2019.
+//  Created by Marcus Florentin on 12/06/2019.
 //  Copyright © 2019 Marcus Florentin. All rights reserved.
 //
 
 import UIKit
 import API42
 
-class ProjectsTableViewController: UITableViewController, UITableViewDataSourcePrefetching {
+class ProjectTableViewController: UITableViewController {
 
-	private var projects : [Project] = []
-
-	private var page : Int = 1
+	var project : Project!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,59 +22,30 @@ class ProjectsTableViewController: UITableViewController, UITableViewDataSourceP
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-		fetchData()
+		self.navigationItem.title = project.name
     }
 
-
-	private func fetchData() {
-		controller?.projects(page, handler: { (result) in
-			switch result {
-			case .success(let results):
-				self.projects = results
-				DispatchQueue.main.async {
-					self.tableView.reloadData()
-				}
-			case .failure(let error):
-				print(error)
-			}
-
-
-		})
-	}
-
-    // MARK: - Table View Data Source
+    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return projects.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-		let project = projects[indexPath.row]
-
-		cell.textLabel?.text = project.name
-		cell.detailTextLabel?.text = project.objectives?.first
 
         return cell
     }
-
-
-	// MARK: - Table View Data Source Prefetching
-
-	func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-		page += 1
-		fetchData()
-	}
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -113,24 +82,14 @@ class ProjectsTableViewController: UITableViewController, UITableViewDataSourceP
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		super.prepare(for: segue, sender: sender)
-
-		if segue.identifier == "ProjectDetail" {
-			let dest = segue.destination as! ProjectTableViewController
-
-			let indexPath = tableView.indexPath(for: sender as! UITableViewCell)!
-
-			dest.project = projects[indexPath.row]
-
-		}
-
     }
+    */
 
 }
