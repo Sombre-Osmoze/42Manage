@@ -70,7 +70,6 @@ class LoginViewController: UIViewController {
 				self.stepProgress.setProgress(7/7, animated: true)
 				self.performSegue(withIdentifier: "Load", sender: nil)
 				auth = nil
-				auth?.step = .none
 			case .code:
 				self.stepLabel.text = "Credentials storage..."
 				self.stepProgress.setProgress(3/7, animated: true)
