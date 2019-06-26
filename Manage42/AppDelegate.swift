@@ -15,7 +15,7 @@ var auth : AuthenticationHandler? = nil
 var controller : ControllerAPI? = nil
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ControllerAPIDelegate {
 
 	var window: UIWindow?
 
@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		do {
 			controller =  ControllerAPI(token: try Token())
-			if true, UserDefaults.standard.value(forKey: "user") == nil {
+			controller?.delegate = self
+			if UserDefaults.standard.value(forKey: "user") == nil {
 				throw CachedData.noUser
 			}
 		} catch  {
@@ -33,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			os_log(.info, "Can't create session because: %s", error.localizedDescription)
 			askAccount()
 		}
-	
+
 
 
 		return true
@@ -67,8 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return false
 	}
 
-
-
 	func askAccount() -> Void {
 		if window == nil {
 			window = UIWindow(frame: UIScreen.main.bounds)
@@ -81,6 +80,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window?.rootViewController = initialViewController
 		self.window?.makeKeyAndVisible()
 
+	}
+
+	// MARK: - Controller
+
+	func didLogout() {
+		DispatchQueue.main.async {
+			self.askAccount()
+		}
 	}
 
 }
